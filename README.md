@@ -33,7 +33,7 @@ I'm a **Linux Enthusiast** and passionate developer who loves exploring the dept
 ---
 -->
 
-## GitHub Stats
+<!--## GitHub Stats
 
 <p align="center">
   <a href="https://git.io/awesome-stats-card">
