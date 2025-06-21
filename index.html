@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarishDevLab | Support My Work</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --primary: #6a11cb;
+            --secondary: #2575fc;
+            --accent: #ff2d75;
+            --teal: #00c9a7;
+            --purple: #9d4edd;
+            --dark: #0f0c29;
+            --light: #f8f9fa;
+            --glass: rgba(255, 255, 255, 0.15);
+            --border: rgba(255, 255, 255, 0.18);
+            --shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, var(--dark), #24243e, #302b63);
+            padding: 20px;
+            position: relative;
+        }
+
+        
+        
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .gradient-layer {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            opacity: 0.7;
+            filter: blur(80px);
+            animation: rotate 25s linear infinite;
+            background: conic-gradient(
+                from 0deg at 50% 50%,
+                var(--primary),
+                var(--teal),
+                var(--secondary),
+                var(--purple),
+                var(--accent),
+                var(--primary)
+            );
+        }
+
+        .gradient-layer:nth-child(2) {
+            animation-duration: 30s;
+            animation-direction: reverse;
+            opacity: 0.5;
+        }
+
+        .gradient-layer:nth-child(3) {
+            animation-duration: 40s;
+            opacity: 0.3;
+        }
+
+        
+        .glass-card {
+            width: 100%;
+            max-width: 480px;
+            padding: 40px 30px;
+            background: var(--glass);
+            border-radius: 24px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow), inset 0 0 20px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+            margin: 20px 0;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .glass-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.05));
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        
+        .logo {
+            font-size: 48px;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #fff, #e0e0ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        .support-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 36px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transform: translateZ(0);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 
+                0 10px 20px rgba(106, 17, 203, 0.3),
+                0 6px 6px rgba(37, 117, 252, 0.2),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+            margin-bottom: 40px;
+            z-index: 1;
+            text-decoration: none;
+        }
+
+        .support-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.2), 
+                transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+            z-index: -1;
+        }
+
+        .support-button:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 
+                0 15px 30px rgba(106, 17, 203, 0.4),
+                0 10px 10px rgba(37, 117, 252, 0.3),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+
+        .support-button:hover::before {
+            transform: translateX(100%);
+        }
+
+        .support-button:active {
+            transform: translateY(2px) scale(0.98);
+        }
+
+        .upi-logo {
+            width: 32px;
+            height: 32px;
+            filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+        }
+
+        
+        .qr-container {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            max-width: 260px;
+        }
+
+        .qr-container:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .qr-image {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            aspect-ratio: 971/1127;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .scan-text {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        
+        .footer {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            text-align: center;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 10;
+        }
+
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        
+        @media (max-width: 768px) {
+            .glass-card {
+                padding: 30px 20px;
+                border-radius: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            p {
+                font-size: 1rem;
+                max-width: 95%;
+            }
+            
+            .support-button {
+                padding: 16px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .qr-image {
+                max-width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .glass-card {
+                padding: 25px 15px;
+                margin: 10px 0;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .support-button {
+                padding: 14px 25px;
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+            
+            .qr-container {
+                padding: 15px;
+                max-width: 220px;
+            }
+            
+            .qr-image {
+                max-width: 180px;
+            }
+            
+            .logo {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+            
+            p {
+                font-size: 0.95rem;
+            }
+            
+            .support-button {
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            .qr-container {
+                max-width: 200px;
+            }
+            
+            .qr-image {
+                max-width: 160px;
+            }
+        }
+
+        
+        @media (max-height: 600px) and (orientation: landscape) {
+            .glass-card {
+                padding: 20px 15px;
+                margin: 10px 0;
+            }
+            
+            .logo {
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            
+            p {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+            
+            .support-button {
+                padding: 12px 20px;
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+            }
+            
+            .qr-container {
+                padding: 12px;
+                max-width: 180px;
+            }
+            
+            .qr-image {
+                max-width: 150px;
+            }
+            
+            .scan-text {
+                margin-top: 12px;
+                font-size: 0.85rem;
+            }
+            
+            .footer {
+                padding: 10px 0;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="gradient-layer"></div>
+        <div class="gradient-layer"></div>
+        <div class="gradient-layer"></div>
+    </div>
+
+    <div class="glass-card">
+        <div class="logo">
+            <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <h1>Support My Work</h1>
+        <p>Your contribution helps me create more valuable content and resources. Every donation makes a difference!</p>
+        
+        <a href="upi://pay?pa=harishrajrt007@okicici&cu=INR" class="support-button">
+            <svg class="upi-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2"/>
+                <path d="M8 12H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 8L16 12L12 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Support Now
+        </a>
+        
+        <div class="qr-container">
+            
+            <img src="UPI_QR_CODE.png" alt="UPI Donation QR Code" class="qr-image">
+        </div>
+        <p class="scan-text">Scan QR code to donate via UPI</p>
+    </div>
+
+    <div class="footer">
+        Made in ❤️ with INDIA
+    </div>
+
+    <script>
+        
+        const button = document.querySelector('.support-button');
+        
+        button.addEventListener('mousemove', (e) => {
+            const rect = button.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const moveX = (x - centerX) / 8;
+            const moveY = (y - centerY) / 8;
+            
+            button.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.02)`;
+        });
+        
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = '';
+        });
+        
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelector('.qr-container').style.opacity = 1;
+                document.querySelector('.scan-text').style.opacity = 1;
+            }, 600);
+        });
+    </script>
+</body>
+</html>
