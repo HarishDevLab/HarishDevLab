@@ -19,17 +19,22 @@
 ---
 
 <h2 align="center">
-  <strong>📊 Stats</strong>
+  <strong>Stats</strong>
 </h2>
 
 <p align="center">
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=HarishDevLab&theme=tokyonight" alt="GitHub Stats" />
+  <a href="https://git.io/awesome-stats-card">
+    <img
+      src="https://awesome-github-stats.azurewebsites.net/user-stats/harishdevlab?cardType=level-alternate&theme=great-gatsby&fontFamily=Roboto&showIcons=false&preferLogin=true&borderRadius=10&Ring=5AFF20"
+      alt="GitHub Stats"
+    />
+  </a>
 </p>
-
 <p align="center">
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=HarishDevLab&theme=tokyonight" alt="GitHub Summary" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=harishdevlab&theme=tokyo-night" />
 </p>
 
+---
 
 <!--
 <p align="center">
@@ -61,8 +66,8 @@
 </div>
 
 
-<h3 align="center">
+<!--<h3 align="center">
 
   [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fantasque+Sans+Mono&weight=700&size=24&pause=1000&color=0e75b6&center=true&width=446&lines=Thank+you+for+visiting!+%F0%9F%91%8D)](https://git.io/typing-svg)
 
-</h3>
+</h3>-->
