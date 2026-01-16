@@ -25,7 +25,7 @@
 <p align="center">
   <a href="https://git.io/awesome-stats-card">
     <img
-      src="https://awesome-github-stats.azurewebsites.net/user-stats/harishdevlab?cardType=level-alternate&theme=great-gatsby&fontFamily=Roboto&showIcons=false&preferLogin=true&borderRadius=10&Ring=5AFF20"
+      src="https://awesome-github-stats.azurewebsites.net/user-stats/harishdevlab?cardType=level&theme=great-gatsby&fontFamily=Roboto&showIcons=false&preferLogin=true&borderRadius=10&Ring=5AFF20"
       alt="GitHub Stats"
     />
   </a>
