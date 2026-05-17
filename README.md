@@ -1,4 +1,4 @@
-<p align="right"> 
+<!--<p align="right"> 
   <img src="https://komarev.com/ghpvc/?username=HarishDevLab&label=Profile%20views&color=0e75b6&size=24&style=flat" alt="HarishDevLab" /> 
 </p>
 
@@ -31,6 +31,7 @@ I'm a **Linux Enthusiast** and passionate developer who loves exploring the dept
 - **Other:** Debugging, System Architecture, Open Source Contribution
 
 ---
+-->
 
 ## GitHub Stats & Activity
 
@@ -49,7 +50,7 @@ I'm a **Linux Enthusiast** and passionate developer who loves exploring the dept
 
 ---
 
-
+<!--
 ## YouTube Channel
 
 I regularly create content about Linux, development tutorials, and tech explorations. 
@@ -87,4 +88,4 @@ If you find my content helpful and want to support my journey:
 
 <h3 align="center">
   Thank you for visiting my profile! Don't forget to star interesting repositories and subscribe to my YouTube channel!
-</h3>
+</h3>-->
