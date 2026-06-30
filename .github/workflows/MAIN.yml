@@ -4,8 +4,8 @@ name: Contribution Graph
 
 on:
   schedule:
-      # every 23 hours
-    - cron: "0 */23 * * *"
+      
+    - cron: "0 0 * * *"
 
 # This command allows us to run the Action automatically from the Actions tab.
   workflow_dispatch:
