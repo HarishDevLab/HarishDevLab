@@ -33,7 +33,7 @@ I'm a **Linux Enthusiast** and passionate developer who loves exploring the dept
 ---
 -->
 
-## GitHub Stats & Activity
+## GitHub Stats
 
 <p align="center">
   <a href="https://git.io/awesome-stats-card">
@@ -44,11 +44,27 @@ I'm a **Linux Enthusiast** and passionate developer who loves exploring the dept
   </a>
 </p>
 
-<p align="center">
+<!--<p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=harishdevlab&theme=tokyo-night" alt="GitHub Activity Graph" />
+</p>-->
+<p align="center">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/HarishDevLab/HarishDevLab/output/github-contribution-grid-snake-dark.svg"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://raw.githubusercontent.com/HarishDevLab/HarishDevLab/output/github-contribution-grid-snake.svg"
+    />
+    <img
+      alt="GitHub contribution snake"
+      src="https://raw.githubusercontent.com/HarishDevLab/HarishDevLab/output/github-contribution-grid-snake.svg"
+    />
+  </picture>
 </p>
 
----
+
 
 <!--
 ## YouTube Channel
