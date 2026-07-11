@@ -47,7 +47,7 @@ I'm a **Linux Enthusiast** and passionate developer who loves exploring the dept
 <!--<p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=harishdevlab&theme=tokyo-night" alt="GitHub Activity Graph" />
 </p>-->
-<p align="center">
+<!--<p align="center">
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
@@ -62,7 +62,7 @@ I'm a **Linux Enthusiast** and passionate developer who loves exploring the dept
       src="https://raw.githubusercontent.com/HarishDevLab/HarishDevLab/output/github-contribution-grid-snake.svg"
     />
   </picture>
-</p>
+</p>-->
 
 
 
